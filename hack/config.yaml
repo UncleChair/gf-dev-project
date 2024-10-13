@@ -1,0 +1,19 @@
+
+# CLI tool, only in development environment.
+# https://goframe.org/pages/viewpage.action?pageId=3673173
+gfcli:
+  docker:
+    build: "-a amd64 -s linux -p temp -ew"
+    tagPrefixes:
+      - my.image.pub/my-app
+
+  run:
+    path:  "bin"
+    args:  ""
+    
+  build:
+    name: "gf-test"
+    arch: "amd64"
+    system: "windows"
+    output: "./tmp/gf-test"
+    dumpEnv: true
