@@ -14,6 +14,6 @@ type HelloRes struct {
 }
 
 type Error404 struct {
-	Good string `json:"good"`
-	Bad  string `json:"bad"`
+	Code    string `json:"code" eg:"1"`
+	Message string `json:"message" eg:"Not Found"`
 }
